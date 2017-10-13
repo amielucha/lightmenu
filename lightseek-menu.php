@@ -3,7 +3,7 @@
  * Plugin Name: Lightseek Mobile Menu
  * Plugin URI: http://iseek.ie/
  * Description: Fast modern mobile menu for Lightseek theme.
- * Version: 0.3.0
+ * Version: 0.3.1
  * Author: Slawek Amielucha
  * Author URI: https://amielucha.com
  * Text Domain: lightmenu

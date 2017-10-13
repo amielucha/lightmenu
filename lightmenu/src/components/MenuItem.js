@@ -32,7 +32,7 @@ export default class MenuItem extends Component {
   render() {
     return (
       <li className={'light-menu-item light-menu-item-' + this.props.id + ' ' + this.props.classes}>
-        <a className={'light-menu-link'} href={this.props.url}>{this.props.label}</a><ChildrenArrow id={this.props.id} children={this.props.children} />
+        <a className={'light-menu-link light-menu-link-inner'} href={this.props.url} dangerouslySetInnerHTML={{__html: this.props.label}}></a><ChildrenArrow id={this.props.id} children={this.props.children} />
       </li>
     )
   }
