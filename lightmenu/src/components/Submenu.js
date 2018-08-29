@@ -5,10 +5,13 @@ import MenuItems from './MenuItems';
 export default class Submenu extends Component {
   render() {
     const matchingNav = this.props.data.find(x => x.ID === +this.props.matches.params.id);
-    const children = matchingNav ? matchingNav.children : [];
-    const title = matchingNav ? matchingNav.title : "";
+    const matchingSubnav = matchingNav ? '' : this.props.data.map( x => x.children ).filter( x => x.some( x => x.ID === +this.props.matches.params.id ) )[0].find( x=> x.ID === +this.props.matches.params.id );
+    // ... || this.props.data.map( x => x.children ).filter( x => x.length ).find( x => x[0].ID === +this.props.matches.params.id )
+    const children = matchingNav ? matchingNav.children : ( matchingSubnav ? matchingSubnav.children : [] );
+    const title = matchingNav ? matchingNav.title : ( matchingSubnav ? matchingSubnav.title : "" );
 
-    //console.log('Data Extract: ', children );
+
+    console.log('Data Extract: ', this.props.data, matchingSubnav);
 
     // TODO: Add back button with the menu name (see Amazon example)
     // TODO: replace the onClick with <Link />
