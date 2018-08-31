@@ -198,6 +198,7 @@
 /* Custom class Borders */
 .light-menu .menu-bb {
   border-bottom: 1px solid rgba(0,0,0,.1);
+  flex-shrink: 0;
 }
 
 .light-menu .menu-bt {
